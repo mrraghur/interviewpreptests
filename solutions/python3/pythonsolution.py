@@ -39,20 +39,3 @@ class Solution:
             return "Check the format of input variables"
 
 
-loc = 'testcases/minimumheighttree.json'
-
-testcases = open(loc,'r')
-testcasesJson = json.load(testcases)
-
-
-sol = Solution
-for testcase in testcasesJson['testcases']:
-    n,edges = testcase['args']['n'],testcase['args']['edges']
-    result = sol.findMinHeightTrees(sol,n,edges)
-    print("Your Answer: ",testcase['expected'],"  True Answer: ",result)
-    try:
-        assert result == testcase['expected']
-        print('Correct Answer')
-    except:
-        print('Wrong Answer')
-
