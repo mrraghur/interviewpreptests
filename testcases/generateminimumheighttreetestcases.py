@@ -8,7 +8,7 @@ from pythonsolution import Solution as Answer
 answer = Answer
 
 
-testcases = open('testcases/minimumheighttree.json')
+testcases = open('testcases/minimumheighttree.json','r')
 testcases = json.load(testcases)
 
 nodes = 11
@@ -34,5 +34,8 @@ testcases['testcases'].append(testcase)
 print(testcases)
 tt = json.dumps(testcases)
 
+ttt = open('testcases/minimumheighttree.json','w')
+ttt.write(tt)
+ttt.close()
 # plt.show()
 print(tt)
