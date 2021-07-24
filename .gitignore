@@ -1,3 +1,5 @@
 temp
 .vscode
 pythonvenv
+__pycache__
+.pyc
