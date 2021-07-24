@@ -1,0 +1,32 @@
+{
+  "schema": {
+    "args": {
+      "nums": "List[int]",
+      "k": "int"
+    },
+    "expected": "List[int]"
+  },
+  "testcases": [
+    {
+      "args": {
+        "nums": [1, 2, 3, 4, 5, 6, 7],
+        "k": 3
+      },
+      "expected": [5, 6, 7, 1, 2, 3, 4]
+    },
+    {
+      "args": {
+        "nums": [1, 2, 3],
+        "k": 3
+      },
+      "expected": [1, 2, 3]
+    },
+    {
+      "args": {
+        "nums": [1, 2],
+        "k": 3
+      },
+      "expected": [2, 1]
+    }
+  ]
+}
