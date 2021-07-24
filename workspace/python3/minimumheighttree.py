@@ -9,7 +9,7 @@ def minimumheighttree(testcase) -> List[int]:
         n = Schema(int).validate(n)
         edges = Schema(list).validate(edges)
 
-        "Write your code"
+        #"Write your code here and run with testHarness"
         return []
     except :
         return "Check the format of input variables"

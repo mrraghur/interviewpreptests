@@ -4,6 +4,7 @@ from schema import Schema, And, Use, Optional, SchemaError
 
 class Solution:
 
+    #One method for each keyword.
     def findMinHeightTrees(self, n: int, edges: List[List[int]]) -> List[int]:
         try:
             n = Schema(int).validate(n)
