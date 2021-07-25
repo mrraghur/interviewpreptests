@@ -12,20 +12,19 @@ testcases = open(loc,'r')
 testcasesJson = json.load(testcases)
 
 print ("Running testcase workspace/python3/" + problem_keyword + ".py")
+allTestcasesPassed = True;
 for testcase in testcasesJson['testcases']:
     userAnswer = getattr(python3,problem_keyword)(testcase['args'])
-    allTestcasesPassed = True;
-    try:
+    if (userAnswer != testcase['expected']):
+        allTestcasesPassed = false;
+        print('Wrong Answer, Please check your solution ')
+        print("Your Answer: ",userAnswer,"  Expected Answer: ",testcase['expected'])
+    else:
         print('Correct Answer')
         print("Your Answer: ",userAnswer,"  Expected Answer: ",testcase['expected'])
-    except:
-        if (userAnswer != testcase['expected']):
-            allTestcasesPassed = false;
-            print('Wrong Answer, Please check your solution ')
-            print("Your Answer: ",userAnswer,"  Expected Answer: ",testcase['expected'])
 
-    if (allTestcasesPassed):
-        print ("All testcases passed. Good going.")
-    else:
-        print ("Some testcases failed. Please fix your testcases and try again")
-        assert allTestcasesPassed
+if (allTestcasesPassed):
+    print ("All testcases passed. Good going.")
+else:
+    print ("Some testcases failed. Please fix your testcases and try again")
+    assert allTestcasesPassed
