@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "args": {
+      "nums": "List[int]",
+      "k": "int"
+    },
+    "expected": "List[int]"
+  },
+  "testcases": [
+    {
+      "args": {
+        "num1": "2",
+        "num2": "3"
+      },
+      "expected": "6"
+    },
+    {
+      "args": {
+        "num1": "123",
+        "num2": "456"
+      },
+      "expected": "56088"
+    }
+  ]
+}

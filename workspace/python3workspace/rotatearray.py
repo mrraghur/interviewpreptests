@@ -5,7 +5,7 @@ def reverse(nums,start,end):
         nums[start],nums[end] = nums[end],nums[start]
         start,end = start+1,end-1
 
-def rotatearray(testcases) -> None:
+def rotatearray(testcases) -> List[int]:
 
     #"Write your code here and run with testHarness"
     nums,k = testcases['nums'],testcases['k']

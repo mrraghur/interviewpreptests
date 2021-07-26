@@ -1,0 +1,25 @@
+{
+  "schema": {
+    "args": {
+      "nums": "List[List[int]]"
+    },
+    "expected": "List[List[int]]"
+  },
+  "testcases": [
+    {
+      "args": {
+        "s": "aab"
+      },
+      "expected": [
+        ["a", "a", "b"],
+        ["aa", "b"]
+      ]
+    },
+    {
+      "args": {
+        "s": "a"
+      },
+      "expected": [["a"]]
+    }
+  ]
+}
