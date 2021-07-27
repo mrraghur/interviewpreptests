@@ -1,7 +1,7 @@
 from shutil import copyfile
 import os
 
-newfile = 'pow_x_n'
+newfile = 'permutations'
 oldfile = 'rotatearray'
 src = f'./goldFiles/python3/{oldfile}.py'
 dst = f'./goldFiles/python3/{newfile}.py'
