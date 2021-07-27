@@ -1,0 +1,42 @@
+{
+  "schema": {
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "object",
+        "properties": {
+          "s": {
+            "type": "string"
+          },
+          "numRows": { "type": "integer" }
+        }
+      },
+      "expected": {
+        "type": "string"
+      }
+    }
+  },
+  "testcases": [
+    {
+      "args": {
+        "s": "PAYPALISHIRING",
+        "numRows": 3
+      },
+      "expected": "PAHNAPLSIIGYIR"
+    },
+    {
+      "args": {
+        "s": "PAYPALISHIRING",
+        "numRows": 4
+      },
+      "expected": "PINALSIGYAHRPI"
+    },
+    {
+      "args": {
+        "s": "A",
+        "numRows": 1
+      },
+      "expected": "A"
+    }
+  ]
+}

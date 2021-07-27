@@ -1,35 +1,39 @@
 import json
 import sys
+
 sys.path.insert(1, './workspace/')
 import python3workspace
+import jsonschema
+from jsonschema import validate
 
 if ((len(sys.argv) != 2) or (sys.argv[1] == "--help")):
     print ("Usage: " + sys.argv[0] + " <nameoftestclasstorun>")
 
 def checkLists(l1,l2):
-    a = 1
-    if len(l1) == len(l2):
-        a *= 1
-    else:
-        return 0
+    l1 = list(map(tuple,l1))
+    l2 = list(map(tuple,l2))
+    if set(l1) == set(l2):
+        return 1    
+    return 0
 
-    for i in l1:
-        if i in l2:
-            a *= 1
-        else:
-            return 0
-    
-    return 1
-
-# problem_keyword = sys.argv[1]
-problem_keyword = 'permutations'
+problem_keyword = sys.argv[1]
+# problem_keyword = 'rotatearray'
 loc = 'testcases/'+problem_keyword+'.json'
 testcases = open(loc,'r')
 testcasesJson = json.load(testcases)
 
 allTestcasesPassed = True
 print ("Running testcase workspace/python3workspace/" + problem_keyword + ".py")
+schema = testcasesJson['schema']
+
 for testcase in testcasesJson['testcases']:
+    try:
+        validate(testcase,schema)
+        print("testcase in correct format")
+    except jsonschema.exceptions.ValidationError as err:
+        print(testcase  )
+        raise Exception("Check the testcase format")
+        
     userAnswer = getattr(python3workspace,problem_keyword)(testcase['args'])
     
     if "checkUnorderedLists" in testcase['args'].keys() and testcase['args']['checkUnorderedLists'] == True:

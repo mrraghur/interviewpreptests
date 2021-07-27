@@ -1,10 +1,16 @@
 {
   "schema": {
-    "args": {
-      "nums": "List[int]",
-      "k": "int"
-    },
-    "expected": "List[int]"
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "object",
+        "properties": {
+          "num1": { "type": "string" },
+          "num2": { "type": "string" }
+        }
+      },
+      "expected": { "type": "string" }
+    }
   },
   "testcases": [
     {

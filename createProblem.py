@@ -1,8 +1,8 @@
 from shutil import copyfile
 import os
 
-newfile = 'permutations'
-oldfile = 'rotatearray'
+newfile = 'zigzagconversion'
+oldfile = 'dummy'
 src = f'./goldFiles/python3/{oldfile}.py'
 dst = f'./goldFiles/python3/{newfile}.py'
 copyfile(src, dst)
@@ -55,7 +55,3 @@ init = open('./workspace/python3workspace/__init__.py','w')
 init.write('\n'.join(solsImports))
 init.close()
 print('\n'.join(solsImports))
-
-
-
-

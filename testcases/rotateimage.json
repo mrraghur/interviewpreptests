@@ -1,9 +1,25 @@
 {
   "schema": {
-    "args": {
-      "nums": "List[List[int]]"
-    },
-    "expected": "List[List[int]]"
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "object",
+        "properties": {
+          "matrix": {
+            "type": "array",
+            "items": {
+              "type": "array"
+            }
+          }
+        }
+      },
+      "expected": {
+        "type": "array",
+        "items": {
+          "type": "array"
+        }
+      }
+    }
   },
   "testcases": [
     {

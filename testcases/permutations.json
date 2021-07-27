@@ -1,10 +1,22 @@
 {
   "schema": {
-    "args": {
-      "nums": "List[int]",
-      "checkUnorderedLists": "boolean"
-    },
-    "expected": "List[List[int]]"
+    "type": "object",
+    "properties": {
+      "args": {
+        "type": "object",
+        "properties": {
+          "nums": {
+            "type": "array"
+          }
+        }
+      },
+      "expected": {
+        "type": "array",
+        "items": {
+          "type": "array"
+        }
+      }
+    }
   },
   "testcases": [
     {
