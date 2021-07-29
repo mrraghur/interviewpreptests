@@ -5,10 +5,8 @@
       "args": {
         "type": "object",
         "properties": {
-          "x": {
-            "type": "number"
-          },
-          "k": { "type": "integer" }
+          "x": { "type": "number" },
+          "n": { "type": "integer" }
         }
       },
       "expected": {
