@@ -1,10 +1,10 @@
 import json
 import random,string
 import numpy as np
-
-# problem_keyword = sys.argv[1] 
+import sys 
+problem_keyword = sys.argv[1] 
 # problem_keyword is used specifying the program that needs to be run
-problem_keyword = 'permutations'
+# problem_keyword = 'permutations'
 
 def genArgUsingDtype(d,type):
     # Read the datatype and generate random testcase
