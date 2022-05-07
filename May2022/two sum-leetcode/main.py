@@ -1,7 +1,7 @@
-with open('ts1.txt') as f:
+with open('testcases/ts1.txt') as f:
     content =f.readlines()
     l1=[x.strip() for x in content]
-with open('ts11.txt') as f:
+with open('testcases/ts11.txt') as f:
     n=int(f.read())
 #print(l,len(l))
 def solutionGold(l,t):
