@@ -25,7 +25,7 @@ for j in range(n):
         k=2
         return k,x;
     u,ul=soluser(l1,n)
-    if ans==u:
+    if ans==u and al==ul:
         cp+=1
         print('YES')
     else:
