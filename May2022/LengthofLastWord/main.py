@@ -3,7 +3,7 @@ cp=0
 cf=0
 for j in range(n):
     with open("testcases/Llw" + str(j+1) + ".txt") as f:
-    s1 =f.read()
+        s1 =f.read()
     #print(s1)
     #print(l1)
     def solutionGold(s):
