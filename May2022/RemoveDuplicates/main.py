@@ -3,10 +3,8 @@ cp=0
 cf=0
 for j in range(n):
     with open("testcases/rm" + str(j+1) + ".txt") as f:
-    content =f.readlines()
-    l1=[x.strip() for x in content]
-    #print(s1)
-    #print(l1)
+        content =f.readlines()
+        l1=[x.strip() for x in content]
     def solutionGold(li):
         res=[i for n, i in enumerate(li) if i not in li[:n]]
         return res;
