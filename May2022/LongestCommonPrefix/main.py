@@ -8,7 +8,7 @@ for j in range(n):
     #print(s1)
     #print(l1)
     roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
-    def solutionGold(s):
+    def solutionGold(strs):
         if len(strs) == 0:
             return ''
         elif len(strs) == 1:
@@ -23,7 +23,7 @@ for j in range(n):
             i += 1
         return reference[:m]
     ans=solutionGold(s1)
-    def soluser(s):
+    def soluser(strs):
         #wrong solution 
         x=[]
         k=""
