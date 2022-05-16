@@ -3,18 +3,17 @@ cp=0
 cf=0
 for j in range(n):
     with open("testcases/is" + str(j+1) + ".txt") as f:
-    content =f.readlines()
-    l1=[x.strip() for x in content]
+        content =f.readlines()
+        l1=[x.strip() for x in content]
     #print(l1)
-
     def solutionGold(haystack,needle):
-    if needle == '':
-        return 0
-    length = len(needle)
-    for i in range(len(haystack) - length + 1):
-        if haystack[i:i + length] == needle:
-            return i
-    return -1
+        if needle == '':
+            return 0
+        length = len(needle)
+        for i in range(len(haystack) - length + 1):
+            if haystack[i:i + length] == needle:
+                return i
+        return -1
     ans=solutionGold(l1[0],l1[1])
     def soluser(haystack,needle):
         #wrong solution
