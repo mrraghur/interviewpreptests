@@ -3,10 +3,8 @@ cp=0
 cf=0
 for j in range(n):
     with open("testcases/msa" + str(j+1) + ".txt") as f:
-    content =f.readlines()
-    l1=[x.strip() for x in content]
-    #print(s1)
-    #print(l1)
+        content =f.readlines()
+        l1=[x.strip() for x in content]
     roman = {'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
     def solutionGold(nums):
         dp = []
