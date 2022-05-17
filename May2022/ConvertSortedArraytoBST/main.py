@@ -1,8 +1,8 @@
-n = 10 # number of testcases
+n = 10  # number of testcases
 cp = 0
 cf = 0
 for j in range(n):
-    with open("BuiltbyInterns/interviewpreptests/May2022/ConvertSortedArraytoBST/testcases/ArrtoBST" + str(j + 1) + ".txt") as f:
+    with open("testcases/ArrtoBST" + str(j + 1) + ".txt") as f:
         content = f.readlines()
         arr = [int(x) for x in content]
 
@@ -27,7 +27,6 @@ for j in range(n):
 
     obj = Solution()
     ans = obj.solutionGold(arr)
-
 
     def soluser(nums):
         # wrong solution

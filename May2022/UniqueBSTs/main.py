@@ -1,4 +1,4 @@
-n = 2  # number of testcases
+n = 10  # number of testcases
 cp = 0
 cf = 0
 for j in range(n):
