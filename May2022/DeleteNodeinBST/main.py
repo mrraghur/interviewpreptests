@@ -1,20 +1,9 @@
+from common import *
+
 n = 10  # number of testcases
-cp = 0
-cf = 0
-for j in range(n):
-    with open("Delnode" + str(j + 1) + ".txt") as f:
-        content = f.readlines()
-        root1 = [x for x in content]
-    with open("testcases/Delnode" + str(j + 1) + str(j + 1) + ".txt") as f:
-        key1 = int(f.read())
 
-    class TreeNode:
-        def __init__(self, val=0, left=None, right=None):
-            self.val = val
-            self.left = left
-            self.right = right
 
-    class Solution:
+class Solution:
         def solutionGold(self, root, key):
             if not root:
                 return None
@@ -40,24 +29,33 @@ for j in range(n):
 
             return root
 
+        def soluser(self, root, key):
+            # wrong solution
+            x = []
+            k = -2
+            return k
+
+
+for j in range(n):
+    testcaseNumber = j+1
+    try:
+        #Input values to build the binary search tree
+        with open("BuiltbyInterns/interviewpreptests/May2022/DeleteNodeinBST/testcases/Delnode" + str(j + 1) + ".txt") as f:
+            content = f.readlines()
+            inp = [x for x in content]
+            root1 = build_bst(inp)
+        #Input key which needs to be deleted from binary search tree
+        with open("BuiltbyInterns/interviewpreptests/May2022/DeleteNodeinBST/testcases/Delnode" + str(j + 1) + str(j + 1) + ".txt") as f:
+            key1 = f.read()
+    except:
+        print('Invalid testcase')
+
+
     obj = Solution()
     ans = obj.solutionGold(root1, key1)
+    userAns = obj.soluser(root1, key1)
+    check(ans, userAns, testcaseNumber)
 
-    def soluser(root, key):
-        # wrong solution
-        x = []
-        k = -2
-        return k
-
-    u = soluser(root1, key1)
-
-    if ans == u:
-        cp += 1
-        print("YES")
-    else:
-        cf += 1
-        print("NO")
+count_cases()
 
 
-print("The number of test cases passed: ", cp)
-print("The number of test cases failed: ", cf)
