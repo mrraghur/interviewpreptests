@@ -27,15 +27,21 @@ def count_cases():
 	print("The number of test cases passed: ", countPassed)
 	print("The number of test cases failed: ", countFailed)
 
-    
-def generate_bst(k):
-    root = bst(height=k)
-    return root.values
 
 
 def build_bst(values):
     root = build(values)
     return root
+
+def read_bst(arr):
+    res = []
+    for i in arr:
+        if i >= str(0):
+            res.append(int(i))
+        else:
+            res.append(None)
+
+    return res
 
 
 

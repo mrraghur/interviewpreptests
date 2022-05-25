@@ -41,11 +41,11 @@ for j in range(n):
         #Input values to build the binary search tree
         with open("testcases/twos" + str(j + 1) + ".txt") as f:
             content = f.readlines()
-            inp = [x for x in content]
+            inp = read_bst(content)
             root1 = build_bst(inp)
         #Input key which needs to be deleted from binary search tree
         with open("testcases/twos" + str(j + 1) + str(j + 1) + ".txt") as f:
-            k = f.read()
+            k = int(f.read())
     except:
         print('Invalid testcase')
 

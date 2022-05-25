@@ -1,7 +1,7 @@
 from common import *
 
 
-n = 2  # number of testcases
+n = 5  # number of testcases
 
 
 class Solution:
@@ -26,7 +26,7 @@ for j in range(n):
         #Input values to build the binary search tree
         with open("BuiltbyInterns/interviewpreptests/May2022/MinAbsDifferenceinBST/testcases/Minabs" + str(j + 1) + ".txt") as f:
             content = f.readlines()
-            inp = [x for x in content]
+            inp = read_bst(content)
             root1 = build_bst(inp)
 
     except:
