@@ -1,6 +1,6 @@
 from common import *
 
-n = 3  # number of testcases
+n = 10  # number of testcases
 
 
 class Solution:
@@ -40,12 +40,12 @@ for j in range(n):
     testcaseNumber = j+1
     try:
         #Input values to build the binary search tree
-        with open("BuiltbyInterns/interviewpreptests/May2022/DeleteNodeinBST/testcases/Delnode" + str(j + 1) + ".txt") as f:
+        with open("testcases/Delnode" + str(j + 1) + ".txt") as f:
             content = f.readlines()
             inp = [x for x in content]
             root1 = build_bst(inp)
         #Input key which needs to be deleted from binary search tree
-        with open("BuiltbyInterns/interviewpreptests/May2022/DeleteNodeinBST/testcases/Delnode" + str(j + 1) + str(j + 1) + ".txt") as f:
+        with open("testcases/Delnode" + str(j + 1) + str(j + 1) + ".txt") as f:
             key1 = f.read()
     except:
         print('Invalid testcase')
