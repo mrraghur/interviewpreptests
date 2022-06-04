@@ -1,27 +1,28 @@
+from common import *
 n = 10  # number of testcases
-cp=0
-cf=0
+class Solution:
+        def solutionGold(self, s):
+            lis = list(s.split(" "))
+            return len(lis[-1])
+
+
+        def soluser(self, s):
+            x = []
+            k = -2
+            return k;
+
 for j in range(n):
-    with open("testcases/Llw" + str(j+1) + ".txt") as f:
-        s1 =f.read()
-    #print(s1)
-    #print(l1)
-    def solutionGold(s):
-        lis = list(s.split(" "))
-        return len(lis[-1])
-    ans=solutionGold(s1)
-    def soluser(s):
-        #wrong solution 
-        x=[]
-        k=-2
-        return k;
-    u=soluser(s1)
-    if ans==u:
-        cp+=1
-        print('YES')
-    else:
-        cf+=1
-        print('NO')
-    #print(ans)
-print("The number of test cases passed: ",cp)
-print("The number of test cases failed: ",cf)
+    testcaseNumber = j+1
+    try:
+        with open("testcases/Llw" + str(j+1) + ".txt") as f:
+            s1=f.read()
+    except:
+        print('Invalid testcase', testcaseNumber)
+        continue
+
+
+    obj = Solution()
+    ans= obj.solutionGold(s1)
+    userAns = obj.soluser(s1)
+    check(ans,userAns,testcaseNumber)
+count_cases()

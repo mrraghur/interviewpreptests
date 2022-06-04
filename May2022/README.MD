@@ -7,9 +7,10 @@ Tests for problems from leetcode.
 3. Developers can add more testcases in *testcase* directory for a particular problem.
 4. Testcases are generated using `testcases_util.py` file.
 
+Run the requirements.txt file using the command `$ pip install -r requirements.txt`
  <br>
  </br>
 
-For Binary Search tree questions
+## For Binary Search tree questions
 1. All the testcases are generated using python built-in module known as [binarytree](https://www.geeksforgeeks.org/binarytree-module-in-python/).
 2. In the each testcase file Binary tree node having ***None*** value is represented as -1.

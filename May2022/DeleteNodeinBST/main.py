@@ -48,7 +48,8 @@ for j in range(n):
         with open("testcases/Delnode" + str(j + 1) + str(j + 1) + ".txt") as f:
             key1 = f.read()
     except:
-        print('Invalid testcase')
+        print('Invalid testcase', testcaseNumber)
+        continue
 
 
     obj = Solution()

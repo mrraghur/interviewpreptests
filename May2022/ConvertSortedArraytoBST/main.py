@@ -30,7 +30,8 @@ for j in range(n):
             content = f.readlines()
             arr = [int(x) for x in content]
     except:
-        print('Invalid testcase')
+        print('Invalid testcase', testcaseNumber)
+        continue
 
 
     
