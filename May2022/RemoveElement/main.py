@@ -24,6 +24,12 @@ for j in range(n):
             l1=[int(x) for x in content]
         with open("testcases/re" + str(j+1) + str(j+1) + ".txt") as f:
             n=int(f.read())
+        if l1.length()<0 or l1.length>100:
+            print('Please input a list of size between 0 and 100')
+            continue
+        if n<0 or n>100:
+            print('Please input a number between 0 and 100', testcaseNumber)
+            continue
     except:
         print('Invalid testcase', testcaseNumber)
         continue
