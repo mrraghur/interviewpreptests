@@ -14,4 +14,4 @@ Run the requirements.txt file using the command `$ pip install -r requirements.t
 ## For Binary Search tree questions
 1. All the testcases are generated using python built-in module known as [binarytree](https://www.geeksforgeeks.org/binarytree-module-in-python/).
 2. In the each testcase file Binary tree node having ***None*** value is represented as -1.
-3.Requires python version 3.7+
+3. Requires python version 3.7+
