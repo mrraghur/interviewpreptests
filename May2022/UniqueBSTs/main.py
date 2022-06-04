@@ -15,6 +15,9 @@ for j in range(n):
     try:
         with open("testcases/UnqBST" + str(j + 1) + ".txt") as f:
             n = int(f.read())
+        if n<1 or n>19:
+            print('Please input a number between 1 and 19', testcaseNumber)
+            continue
     except:
         print('Invalid testcase', testcaseNumber)
         continue
