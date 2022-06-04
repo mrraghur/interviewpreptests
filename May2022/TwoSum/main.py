@@ -1,7 +1,7 @@
 from common import *
 n = 10  # number of testcases
 class Solution:
-        def solutionGold(l,t):
+        def solutionGold(self, l,t):
             values = {}
             for idx, value in enumerate(l):
                 value=int(value)
@@ -9,7 +9,7 @@ class Solution:
                     return [values[t - value], idx]
                 else:
                     values[value] = idx
-        def soluser(l,t):
+        def soluser(self, l,t):
             x = []
             k = -2
             for i in l:
@@ -34,6 +34,7 @@ for j in range(n):
                 n=int(f.read())
     except:
         print('Invalid testcase', testcaseNumber)
+        continue
     obj = Solution()
     ans = obj.solutionGold(l1,n)
     userAns = obj.soluser(l1,n)

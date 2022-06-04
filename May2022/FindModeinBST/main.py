@@ -41,7 +41,8 @@ for j in range(n):
             root1 = build_bst(inp)
 
     except:
-        print("Invalid testcase")
+        print("Invalid testcase", testcaseNumber)
+        continue
 
     obj = Solution()
     ans = obj.solutionGold(root1)

@@ -1,7 +1,7 @@
 from common import *
 n = 10  # number of testcases
 class Solution:
-        def solutionGold(nums,target):
+        def solutionGold(self, nums,target):
             start = 0
             end = len(nums) - 1
             while start + 1 < end:
@@ -17,7 +17,7 @@ class Solution:
             if int(nums[end]) >= target:
                 return end
             return end + 1
-        def soluser(l,t):
+        def soluser(self, l,t):
             x = []
             k = -2
             return k;

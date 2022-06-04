@@ -1,7 +1,7 @@
 from common import *
 n = 10  # number of testcases
 class Solution:
-        def solutionGold(haystack,needle):
+        def solutionGold(self, haystack,needle):
             if needle == '':
                 return 0
                 length = len(needle)
@@ -9,10 +9,11 @@ class Solution:
                     if haystack[i:i + length] == needle:
                         return i
             return -1
-        def soluser(haystack,needle):
+        def soluser(self, haystack,needle):
             x = []
             k = -2
             return k;
+
 for j in range(n):
     testcaseNumber = j+1
     try:
@@ -21,6 +22,9 @@ for j in range(n):
             l1=[x.strip() for x in content]
     except:
         print('Invalid testcase', testcaseNumber)
+        continue
+
+
     obj = Solution()
     ans= obj.solutionGold(l1[0],l1[1])
     userAns = obj.soluser(l1[0],l1[1])

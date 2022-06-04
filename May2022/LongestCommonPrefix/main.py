@@ -1,7 +1,7 @@
 from common import *
 n = 10  # number of testcases
 class Solution:
-        def solutionGold(strs):
+        def solutionGold(self, strs):
             if len(strs) == 0:
                 return ''
             elif len(strs) == 1:
@@ -15,7 +15,7 @@ class Solution:
                         return reference[:i]
                 i += 1
             return reference[:m]
-        def soluser(strs):
+        def soluser(self, strs):
             x = []
             k = ""
             return k;
@@ -27,6 +27,7 @@ for j in range(n):
             s1=[x.strip() for x in content]
     except:
         print('Invalid testcase', testcaseNumber)
+        continue
     obj = Solution()
     ans= obj.solutionGold(s1)
     userAns = obj.soluser(s1)

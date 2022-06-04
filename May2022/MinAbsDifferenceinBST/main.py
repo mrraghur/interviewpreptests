@@ -1,7 +1,7 @@
 from common import *
 
 
-n = 5  # number of testcases
+n = 10  # number of testcases
 
 
 class Solution:
@@ -24,13 +24,14 @@ for j in range(n):
     testcaseNumber = j+1
     try:
         #Input values to build the binary search tree
-        with open("BuiltbyInterns/interviewpreptests/May2022/MinAbsDifferenceinBST/testcases/Minabs" + str(j + 1) + ".txt") as f:
+        with open("testcases/Minabs" + str(j + 1) + ".txt") as f:
             content = f.readlines()
             inp = read_bst(content)
             root1 = build_bst(inp)
 
     except:
-        print('Invalid testcase')
+        print('Invalid testcase', testcaseNumber)
+        continue
 
 
     obj = Solution()

@@ -2,7 +2,7 @@ from common import *
 n = 10  # number of testcases
 roman = {"I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 class Solution:
-        def solutionGold(S):
+        def solutionGold(self, S):
             summ = 0
             for i in range(len(S) - 1, -1, -1):
                 num = roman[S[i]]
@@ -11,10 +11,11 @@ class Solution:
                 else:
                     summ = summ + num
             return summ
-        def soluser(S):
+        def soluser(self, S):
             x = []
             k = -2
             return k;
+
 for j in range(n):
     testcaseNumber = j+1
     try:
@@ -22,6 +23,7 @@ for j in range(n):
             rmn = f.read()
     except:
         print('Invalid testcase', testcaseNumber)
+        continue
     obj = Solution()
     ans = obj.solutionGold(rmn)
     userAns = obj.soluser(rmn)
