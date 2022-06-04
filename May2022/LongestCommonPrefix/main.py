@@ -25,6 +25,9 @@ for j in range(n):
         with open("testcases/Lcp" + str(j+1) + ".txt") as f:
             content =f.readlines()
             s1=[x.strip() for x in content]
+        if s1.length()<1 or s1.length>200:
+            print('Please input a list of size between 1 and 200')
+            continue
     except:
         print('Invalid testcase', testcaseNumber)
         continue
