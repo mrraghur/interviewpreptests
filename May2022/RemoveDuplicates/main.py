@@ -20,6 +20,9 @@ for j in range(n):
         with open("testcases/rm" + str(j+1) + ".txt") as f:
             content =f.readlines()
             l1=[x.strip() for x in content]
+        if l1!=(l1.sort()):
+            print('Please input a sorted array', testcaseNumber)
+            continue
     except:
         print('Invalid testcase', testcaseNumber)
         continue
