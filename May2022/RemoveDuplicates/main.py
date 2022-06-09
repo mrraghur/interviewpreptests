@@ -1,25 +1,35 @@
-t=[1,2,3,4,5,6,7,8,9,10]
-with open('test1.txt') as f:
-    content =f.readlines()
-    l1=[x.strip() for x in content]
-with open('2.txt') as f:
-    content =f.readlines()
-    l2=[x.strip() for x in content]
-#print(l,len(l))
-def solutionGold(li):#this is the code for us that gives correct output for each n every test case
-    res=[i for n, i in enumerate(li) if i not in li[:n]]
-    return res;
-ans=solutionGold(l1)#expected output
-def solutionuser(lis):#this would be the user's code
-    res=[]
-    for i in lis:
-        if i not in res:
-            res.append(i)
-    return res;
-u=solutionuser(l1)#output for the user's code
-if ans==u:print('yes')
-else:print('no')
-ans=solutionGold(l2)
-u=solutionuser(l2)#output for the user's code
-if ans==u:print('yes')
-else:print('no')
+from common import *
+n = 10  # number of testcases
+class Solution:
+        def solutionGold(self, nums):
+            x = 1
+            for i in range(len(nums)-1):
+                if(nums[i]!=nums[i+1]):
+                    nums[x] = nums[i+1]
+                    x+=1
+            return(x)
+
+        def soluser(self, l):
+            x = ["Sndisk"]
+            k = -2
+            return x;
+
+for j in range(n):
+    testcaseNumber = j+1
+    try:
+        with open("testcases/rm" + str(j+1) + ".txt") as f:
+            content =f.readlines()
+            l1=[x.strip() for x in content]
+        if l1!=(l1.sort()):
+            print('Please input a sorted array', testcaseNumber)
+            continue
+    except:
+        print('Invalid testcase', testcaseNumber)
+        continue
+
+
+    obj = Solution()
+    ans= obj.solutionGold(l1)
+    userAns = obj.soluser(l1)
+    check(ans,userAns,testcaseNumber)
+count_cases()
