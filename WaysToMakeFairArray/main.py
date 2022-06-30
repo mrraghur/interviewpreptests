@@ -32,7 +32,7 @@ class Solution:
 for j in range(n):
     testcaseNumber = j+1
     try:
-        with open("fa" + str(j+1) + ".txt") as f:
+        with open("testcases/fa" + str(j+1) + ".txt") as f:
             #num=int(f.read())
             content =f.readlines()
             num=[x.strip() for x in content]
