@@ -1,0 +1,37 @@
+from typing import List
+from common import *
+n = 10  # number of testcases
+class Solution:
+        def solutionGold(self,gain):
+            lst = [0]
+            for i, num in enumerate(gain):
+                res = lst[i] + int(num)
+                lst.append(res)
+            return max(lst)
+        
+        def soluser(self, num):
+            x = []
+            k = -2
+            return k
+
+for j in range(n):
+    testcaseNumber = j+1
+    try:
+        with open("testcases/fh" + str(j+1) + ".txt") as f:
+            #num=int(f.read())
+            content =f.readlines()
+            num=[x.strip() for x in content]
+            #if num.length()<3 or num.length()>1000:
+                #print("Please enter an array of size in range of [3,1000]; testcase-",testcaseNumber)
+        #with open("testcases/db1" + str(j+1) + ".txt") as f:
+            #su=int(f.read())
+    except:
+        print('Invalid testcase', testcaseNumber)
+        continue
+     
+    obj = Solution()
+    ans = obj.solutionGold(num)
+    userAns = obj.soluser(num)
+    check(ans, userAns, testcaseNumber)
+
+count_cases()
